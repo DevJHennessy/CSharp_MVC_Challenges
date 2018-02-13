@@ -91,12 +91,12 @@ namespace Challenge_10_HeroMonster
         
         private void displayResult(Character opponent1, Character opponent2)
         {
-            if (opponent1.Health <= 0)
-                resultLabel.Text += String.Format("<h3>{0} has been slain. {1} wins!</h3>", opponent1.Name, opponent2.Name);
+            if (opponent1.Health <= 0 && opponent2.Health <= 0)
+                resultLabel.Text += String.Format("\r\n{0} and {1} slew each other. They are both losers!", opponent1.Name, opponent2.Name);
             else if (opponent2.Health <= 0)
-                resultLabel.Text += String.Format("<h3>{0} has been slain. {1} wins!</h3>", opponent2.Name, opponent1.Name);
+                resultLabel.Text += String.Format("\r\n{0} has been slain. {1} wins!", opponent2.Name, opponent1.Name);
             else
-                resultLabel.Text += String.Format("<h3>{0} and {1} slew each other. They are both losers!</h3>", opponent1.Name, opponent2.Name);
+                resultLabel.Text += String.Format("\r\n{0} has been slain. {1} wins!", opponent1.Name, opponent2.Name);
         }
          
 
